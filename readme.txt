@@ -1,8 +1,8 @@
 === Contact Form 7 to Google Sheets ===
 Contributors: levismmall
 Tags: sheets, spreadsheets, google sheets, google spreadsheets,  cf7, contact form 7, data, form, form data
-Requires at least: 4.7
-Tested up to: 5.4
+Requires at least: 3.6
+Tested up to: 5.7.3
 Stable tag: 4.3
 Requires PHP: 7.0
 License: GPLv2 or later
@@ -12,83 +12,55 @@ The simple and secure way to connect Contact Form 7 to Google Sheets.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+Sheet Monkey is the easiest and most secure way to connect any form to Google Sheets and with this plugin it now works for Contact Form 7. As we looked at the options for connecting CF7 to Google Sheets, they all seemed too complicated and risky, storing sensitive Google Credentials in your WordPress database.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+We built this to be:
 
-A few notes about the sections above:
+- *Simple*: It shouldn't take multiple steps to send your form data to Sheets. 
+- *Secure*: By handling the connection in Sheet Monkey's cloud and not on the WordPress host, you protect your Google credentials from hackers and malicious plugins. 
+- *No Adware:* The plugin shouldn't be constantly bugging you to upgrade.
 
-* "Contributors" is a comma separated list of wordpress.org usernames
-* "Tags" is a comma separated list of tags that apply to the plugin
-* "Requires at least" is the lowest version that the plugin will work on
-* "Tested up to" is the highest version that you've *successfully used to test the plugin*
-* Stable tag must indicate the Subversion "tag" of the latest stable version
+To connect your form to Google Sheets, you just need to configure a form in Sheet Monkey and copy the  Sheet Monkey form URL to your form config screen in WordPress.
 
-Note that the `readme.txt` value of stable tag is the one that is the defining one for the plugin.  If the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used for displaying information about the plugin.
+== Tour Video ==
 
-If you develop in trunk, you can update the trunk `readme.txt` to reflect changes in your in-development version, without having that information incorrectly disclosed about the current stable version that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
+How to connect your Contact Form 7 with Google Sheets.
 
-If no stable tag is provided, your users may not get the correct version of your code.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jdjexcjAhaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Do I have to match my form fields to sheet headers? =
 
-An answer to that question.
+This plugin will automatically create headers based on your form field names and map the data to those fields. If you're not sure how this works, [read this guide.](https://docs.sheetmonkey.io/#three-rules-of-sheet-monkey)
 
-= What about foo bar? =
+= Is this plugin free? =
 
-Answer to foo bar dilemma.
+Yes. It requires a free Sheet Monkey account. Sheet Monkey has paid accounts for forms with high volumes of monthly traffic.
+
+= Does this plugin store API keys or Client Credentials? =
+
+No. All API keys and client credentials are securely stored in Sheet Monkey's cloud. This means that even if your WordPress site is compormised, you don't have to worry about anyone getting access to your Google account data.
+
+= How do I connect my forms? =
+
+Create a new connection in the [Sheet Monkey dashboard](https://dashboard.sheetmonkey.io) and copy the "Form URL" value into the Contact Form 7 config panel. No other steps are needed.
+
+= Can this plugin send my contact form data to any other services? =
+
+Yes. It can also [send your data to a Notion](https://sheetmonkey.io/notion.html) using Sheet Monkey.
+
+= Can I upload files to Google Sheets? =
+
+Unfortunately, right now this feature isn't supported.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Screenshots are stored in the /assets directory.
-2. This is the second screen shot
+1. Copy the form action from the Sheet Monkey dashboard
+2. Paste the URL into the Contact Form 7 panel
+3. The form data will automatically be stored in Google Sheets
 
 == Changelog ==
 
 = 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
-
-== Upgrade Notice ==
-
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== A brief Markdown Example ==
-
-Markdown is what the parser uses to process much of the readme file.
-
-[markdown syntax]: https://daringfireball.net/projects/markdown/syntax
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Links require brackets and parenthesis:
-
-Here's a link to [WordPress](https://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax]. Link titles are optional, naturally.
-
-Blockquotes are email style:
-
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-And Backticks for code:
-
-`<?php code(); ?>`
+* Initial release.
