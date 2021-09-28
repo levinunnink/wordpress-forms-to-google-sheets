@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Contact Form 7 to Google Sheets
+ * Plugin Name: CF7 to Google Sheets
  * Plugin URI: https://github.com/levinunnink/wordpress-forms-to-google-sheets
  * Description: A <strong>simple</strong>, <strong>secure</strong> way to connect Contact Form 7 data to Google Sheets. Connect in one step. No codes required.
  * Author: Sheet Monkey

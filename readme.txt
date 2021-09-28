@@ -1,4 +1,4 @@
-=== Contact Form 7 to Google Sheets ===
+=== CF7 to Google Sheets ===
 Contributors: levismmall
 Tags: sheets, spreadsheets, google sheets, google spreadsheets,  cf7, contact form 7, data, form, form data
 Requires at least: 3.6

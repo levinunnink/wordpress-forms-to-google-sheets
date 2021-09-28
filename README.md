@@ -1,4 +1,4 @@
-# Contact Form 7 to Google Sheets plugin
+# CF7 to Google Sheets plugin
 
 The simple and secure way to connect Contact Form 7 to Google Sheets.
 
