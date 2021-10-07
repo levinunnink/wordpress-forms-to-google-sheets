@@ -117,6 +117,7 @@ function sheetmonkey__editor_panel_google_sheet( $post ) {
 				return false;
 			}
 			const enableSMLinks = (formId) => {
+				if(!formId) return disableSMLinks();
 				document.getElementById('sheet-monkey-settings').href = `https://dashboard.sheetmonkey.io/edit/${formId}`;
 				document.querySelectorAll('.sm-link').forEach(el => el.setAttribute('style', 'visibility: visibile'));
 			}
