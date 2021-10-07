@@ -102,7 +102,7 @@ function sheetmonkey__editor_panel_google_sheet( $post ) {
 						Get my form action URL 
 						<span class="dashicons dashicons-external"></span>
 					</a>
-					<a href="https://sheetmonkey.io/articles/wordpress.html">
+					<a href="https://docs.sheetmonkey.io/guides/contact-form-wordpress-plugin">
 						<span class="dashicons dashicons-editor-help"></span>
 						Help
 					</a>	
@@ -134,7 +134,7 @@ function sheetmonkey__editor_panel_google_sheet( $post ) {
 				}
 			}
 			<?php if(isset( $form_data[0]['form-action'] )): ?>
-				enableSMLinks(parseSMURL('<?= $form_data[0]['form-action'] ?>'));
+				enableSMLinks(parseSMURL('<?= esc_attr($form_data[0]['form-action']) ?>'));
 			<?php endif; ?>
 		</script>
 	</div>

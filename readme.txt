@@ -1,9 +1,9 @@
-=== CF7 to Google Sheets ===
+=== Sheet Monkey's Contact Form 7 to Google Sheets ===
 Contributors: levismmall
 Tags: sheets, spreadsheets, google sheets, google spreadsheets,  cf7, contact form 7, data, form, form data
 Requires at least: 3.6
-Tested up to: 5.7.3
-Stable tag: 4.3
+Tested up to: 5.8.1
+Stable tag: 1.0.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html

@@ -10,11 +10,13 @@
 * @since 1.0
 */
 function save_sheetmonkey_settings( $post ) {
-	$default = array(
+	$form_action = array(
 			"form-action" => "",			
 	);
 	$sheet_data = isset( $_POST['sheetmonkey'] ) ? $_POST['sheetmonkey'] : $default;
-	update_post_meta( $post->id(), 'sheet-monkey-settings', $sheet_data );	
+	update_post_meta( $post->id(), 'sheet-monkey-settings', array(
+		"form-action" => sanitize_text_field($sheet_data['form-action'])
+	));	
 }
 
 /**
@@ -34,21 +36,11 @@ function sheetmonkey_save_to_google_sheets( $form ) {
 			return;
 		}
 
-		//open connection
-		$ch = curl_init();
+		$options = array(
+			"body" => $fields,
+		);
 
-		$headers = array("Content-Type" => "multipart/form-data");
-
-		//set the url, number of POST vars, POST data
-		curl_setopt($ch, CURLOPT_URL, $form_action);
-		// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-		curl_setopt($ch, CURLOPT_POST, true);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-
-		//So that curl_exec returns the contents of the cURL; rather than echoing it
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-		//execute post
-		$result = curl_exec($ch);
+		wp_safe_remote_post( $form_action, $options );
 	}
 }
 
