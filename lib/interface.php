@@ -34,7 +34,7 @@
 					</p>
 				</div>
 			</div>
-			<img src="<?= plugin_dir_url(__FILE__) ?>/../../monkey.png" width="150" style="float: right" />
+			<img src="<?php echo plugin_dir_url(__FILE__) ?>/../../monkey.png" width="150" style="float: right" />
 		</div>
 		<div class="card">
 			<h2 class="title">Why this plugin?</h2>
@@ -134,7 +134,7 @@ function sheetmonkey__editor_panel_google_sheet( $post ) {
 				}
 			}
 			<?php if(isset( $form_data[0]['form-action'] )): ?>
-				enableSMLinks(parseSMURL('<?= esc_attr($form_data[0]['form-action']) ?>'));
+				enableSMLinks(parseSMURL('<?php echo esc_attr($form_data[0]['form-action']); ?>'));
 			<?php endif; ?>
 		</script>
 	</div>

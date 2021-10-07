@@ -10,13 +10,13 @@
 * @since 1.0
 */
 function save_sheetmonkey_settings( $post ) {
-	$form_action = array(
+	$default = array(
 			"form-action" => "",			
 	);
 	$sheet_data = isset( $_POST['sheetmonkey'] ) ? $_POST['sheetmonkey'] : $default;
 	update_post_meta( $post->id(), 'sheet-monkey-settings', array(
 		"form-action" => sanitize_text_field($sheet_data['form-action'])
-	));	
+	));
 }
 
 /**
