@@ -48,6 +48,9 @@ function sheetmonkey_save_to_google_sheets( $form ) {
 			$boundary = md5(time());
 			$payload = "";
 			foreach($fields as $field_name => $value) {
+				if(is_array($value)) {
+					$value = $value[0];
+				}
 				if(array_key_exists($field_name, $files)) {
 					continue;
 				}
