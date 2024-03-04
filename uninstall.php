@@ -17,4 +17,4 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) die;
  *
  * @since		1.0
  */ 
-delete_option( 'sheet_monkey' );
+delete_option( 'notion_monkey' );

@@ -14,4 +14,4 @@ jobs:
       env:
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
         SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-        SLUG: cf7-to-google-sheets # optional, remove if GitHub repo name matches SVN slug, including capitalization
+        SLUG: cf7-to-notion # optional, remove if GitHub repo name matches SVN slug, including capitalization

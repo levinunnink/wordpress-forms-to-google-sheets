@@ -9,31 +9,31 @@
 * Saves the plugin settings for the form
 * @since 1.0
 */
-function save_sheetmonkey_settings( $post ) {
+function save_notionmonkey_settings( $post ) {
 	$default = array(
 			"form-action" => "",			
 	);
-	$sheet_data = isset( $_POST['sheetmonkey'] ) ? $_POST['sheetmonkey'] : $default;
-	update_post_meta( $post->id(), 'sheet-monkey-settings', array(
+	$sheet_data = isset( $_POST['notionmonkey'] ) ? $_POST['notionmonkey'] : $default;
+	update_post_meta( $post->id(), 'notion-monkey-settings', array(
 		"form-action" => sanitize_text_field($sheet_data['form-action'])
 	));
 }
 
 /**
 * Handles the submission for configured forms and 
-* sends it to the Sheet Monkey API
+* sends it to the Notion Monkey API
 * @since 1.0
 */
 
 /**
 * Handles the submission for configured forms and 
-* sends it to the Sheet Monkey API
+* sends it to the Notion Monkey API
 * @since 1.0
 */
-function sheetmonkey_save_to_google_sheets( $form ) {
+function notionmonkey_save_to_notion( $form ) {
 	$submission = WPCF7_Submission::get_instance();
 	$form_id = $form->id();
-	$form_data = get_post_meta( $form_id, 'sheet-monkey-settings' );
+	$form_data = get_post_meta( $form_id, 'notion-monkey-settings' );
 	$form_action = $form_data[0]['form-action'];
 
 	if(!isset($form_action) || strlen($form_action) == 0) {
